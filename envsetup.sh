@@ -135,9 +135,9 @@ function check_product()
     if (echo -n $1 | grep -q -e "^hellfire_") ; then
         CM_BUILD=$(echo -n $1 | sed -e 's/^hellfire_//g')
         export BUILD_NUMBER=$( (date +%s%N ; echo $CM_BUILD; hostname) | openssl sha1 | sed -e 's/.*=//g; s/ //g' | cut -c1-10 )
-    elif (echo -n $1 | grep -q -e "^eclipse_") ; then
+    elif (echo -n $1 | grep -q -e "^cm_") ; then
         # Fall back to cm_<product>
-        CM_BUILD=$(echo -n $1 | sed -e 's/^eclipse_//g')
+        CM_BUILD=$(echo -n $1 | sed -e 's/^hellfire_//g')
         export BUILD_NUMBER=$( (date +%s%N ; echo $CM_BUILD; hostname) | openssl sha1 | sed -e 's/.*=//g; s/ //g' | cut -c1-10 )
     else
         CM_BUILD=
