@@ -20,9 +20,8 @@
 # in inherited configurations.
 
 PRODUCT_PACKAGES := \
-    libfwdlockengine \
-    WAPPushManager
-
+    libfwdlockengine
+    
 # Put en_US first in the list, so make it default.
 PRODUCT_LOCALES := en_US
 
