@@ -29,8 +29,6 @@ PRODUCT_PACKAGES += \
     audioserver \
     blkid \
     bmgr \
-    bugreport \
-    bugreportz \
     cameraserver \
     content \
     dnsmasq \
