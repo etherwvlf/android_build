@@ -376,7 +376,7 @@ ifneq (,$(user_variant))
   endif
 
   # Disallow mock locations by default for user builds
-  ADDITIONAL_DEFAULT_PROPERTIES += ro.allow.mock.location=0
+  ADDITIONAL_DEFAULT_PROPERTIES += ro.allow.mock.location=1
 
 else # !user_variant
   # Turn on checkjni for non-user builds.
@@ -437,7 +437,7 @@ endif
 
 BUILD_WITHOUT_PV := true
 
-ADDITIONAL_BUILD_PROPERTIES += net.bt.name=Android
+ADDITIONAL_BUILD_PROPERTIES += net.bt.name=IBM
 
 # enable vm tracing in files for now to help track
 # the cause of ANRs in the content process
